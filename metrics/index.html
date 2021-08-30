@@ -341,7 +341,11 @@
 <span class=normal>341</span>
 <span class=normal>342</span>
 <span class=normal>343</span>
-<span class=normal>344</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># HELP dell_hw_bios Version info of firmwares/bios.
+<span class=normal>344</span>
+<span class=normal>345</span>
+<span class=normal>346</span>
+<span class=normal>347</span>
+<span class=normal>348</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code># HELP dell_hw_bios Version info of firmwares/bios.
 # TYPE dell_hw_bios gauge
 dell_hw_bios{manufacturer=&quot;dell inc.&quot;,release_date=&quot;06/26/2020&quot;,version=&quot;2.8.1&quot;} 0
 # HELP dell_hw_chassis_current_reading System board power usage.
@@ -567,10 +571,14 @@ dell_hw_storage_controller_status{controller_name=&quot;Dell HBA330 Mini (Slot E
 # HELP dell_hw_storage_enclosure_status Overall status of storage enclosures.
 # TYPE dell_hw_storage_enclosure_status gauge
 dell_hw_storage_enclosure_status{controller_name=&quot;Dell HBA330 Mini (Embedded)&quot;,enclosure=&quot;0_1&quot;} 0
-# HELP dell_hw_storage_pdisk_status Overall status of physical disks.
+# HELP dell_hw_storage_pdisk_status Overall status of physical disks + failure prediction (if available).
 # TYPE dell_hw_storage_pdisk_status gauge
 dell_hw_storage_pdisk_status{controller=&quot;0&quot;,controller_name=&quot;Dell HBA330 Mini (Embedded)&quot;,disk=&quot;0_1_10&quot;} 0
 dell_hw_storage_pdisk_status{controller=&quot;0&quot;,controller_name=&quot;Dell HBA330 Mini (Embedded)&quot;,disk=&quot;0_1_11&quot;} 0
+# HELP dell_hw_storage_pdisk_failure_predicted Overall status of physical disks + failure prediction (if available).
+# TYPE dell_hw_storage_pdisk_failure_predicted gauge
+dell_hw_storage_pdisk_failure_predicted{controller=&quot;0&quot;,controller_name=&quot;Dell HBA330 Mini (Embedded)&quot;,disk=&quot;0_1_10&quot;} 0
+dell_hw_storage_pdisk_failure_predicted{controller=&quot;0&quot;,controller_name=&quot;Dell HBA330 Mini (Embedded)&quot;,disk=&quot;0_1_11&quot;} 0
 # HELP dell_hw_system_status Overall status of system components.
 # TYPE dell_hw_system_status gauge
 dell_hw_system_status{component=&quot;Main_System_Chassis&quot;} 0
